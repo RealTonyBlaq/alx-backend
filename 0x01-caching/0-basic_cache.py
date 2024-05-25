@@ -17,4 +17,7 @@ class BasicCache(BaseCaching):
         Parent class using a key
         """
         if key and item:
-            self.cache_data[]
+            self.cache_data[key] = item
+
+    def get(self, key):
+        """ """

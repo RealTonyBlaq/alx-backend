@@ -30,10 +30,8 @@ class LRUCache(BaseCaching):
         """ Retrieves the item associated with a key in a cache """
         if key:
             if key in self.cache_data.items():
-                if key not in self.__LRU:
-                    self.__LRU.add(key)
-                else:
-                    self.__LRU.discard()
+                self.__LRU.discard(key)
+                self.__LRU
             return self.cache_data.get(key)
 
         return None

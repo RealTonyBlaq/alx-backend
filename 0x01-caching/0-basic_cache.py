@@ -9,7 +9,7 @@ class BasicCache(BaseCaching):
 
     def __init__():
         """ Initialize the parent attributes """
-        super.
+        super().__init__()
 
     def put(self, key, item):
         """
@@ -22,7 +22,5 @@ class BasicCache(BaseCaching):
     def get(self, key):
         """ Returns the value associated with a key in cache_data"""
         if key:
-            for k, v in self.cache_data.items():
-                if k == key:
-                    return v
+            return 
         return None

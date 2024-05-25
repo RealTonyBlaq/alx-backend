@@ -20,7 +20,9 @@ class FIFOCache(BaseCaching):
                 fifo_key = next(iter(self.cache_data))
                 self.cache_data.pop(fifo_key)
                 print(f'DISCARD: {fifo_key}')
-            self.cache_data[key] = item
+                self.cache_data[key] = item
+            else:
+                
 
     def get(self, key):
         """ Retrieves the item associated with a key in a cache """

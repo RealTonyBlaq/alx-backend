@@ -19,10 +19,10 @@ class LRUCache(BaseCaching):
                 if key in self.__LRU:
                     index = self.__LRU.index(key)
                     self.__LRU.pop(index)
-                self.__LRU.add(key)
+                self.__LRU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
-                least_used_key = list(iter(self.__LRU))[0]
+                least_used_key = self.__LRU
                 self.__LRU.discard(least_used_key)
                 del self.cache_data[least_used_key]
                 print(f'DISCARD: {least_used_key}')

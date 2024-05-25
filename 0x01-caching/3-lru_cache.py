@@ -6,7 +6,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LRUCache(BaseCaching):
     """ Defining the LIFO Caching Model """
-    __LRU = {}
+    __LRU = set()
 
     def __init__(self):
         """ Initializing the Parent Class """
@@ -30,7 +30,7 @@ class LRUCache(BaseCaching):
         """ Retrieves the item associated with a key in a cache """
         if key:
             if key in self.cache_data.items():
-                self.__LRU.add()
+                self.__LRU.add(key)
             return self.cache_data.get(key)
 
         return None

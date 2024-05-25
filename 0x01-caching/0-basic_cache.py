@@ -6,4 +6,6 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class BasicCache(BaseCaching):
     """ Definind the BaseCache class """
-    super.__init__()
+
+    def 
+    

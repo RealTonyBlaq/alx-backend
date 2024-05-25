@@ -18,7 +18,7 @@ class LRUCache(BaseCaching):
             if key in self.cache_data.keys():
                 if key in self.__LRU:
                     index = self.__LRU.index(key)
-                    self.
+                    self.__LRU.pop(index)
                 self.__LRU.add(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:

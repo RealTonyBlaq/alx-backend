@@ -9,7 +9,7 @@ class BasicCache(BaseCaching):
 
     def __init__():
         """ Initialize the parent attributes """
-        super()
+        super.
 
     def put(self, key, item):
         """

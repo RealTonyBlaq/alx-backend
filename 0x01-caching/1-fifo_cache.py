@@ -15,4 +15,4 @@ class FIFOCache(BaseCaching):
         """ Adds an item to the cache using a key """
         if key and item:
             if len(self.cache_data) > self.MAX_ITEMS:
-                first
+                fifo_key = next(iter())

@@ -28,8 +28,8 @@ class LRUCache(BaseCaching):
     def get(self, key):
         """ Retrieves the item associated with a key in a cache """
         if key:
-            if key in self.cahe_data.items():
-                
+            if key in self.cache_data.items():
+                self.__LRU.append(key)
             return self.cache_data.get(key)
 
         return None

@@ -7,7 +7,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 class BasicCache(BaseCaching):
     """ Defining the BaseCache class """
 
-    def __init__():
+    def __init__(self):
         """ Initialize the parent attributes """
         super().__init__()
 

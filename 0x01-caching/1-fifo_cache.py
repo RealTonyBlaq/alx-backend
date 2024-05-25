@@ -4,4 +4,8 @@
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class FIFOCache(BaseCaching)
+class FIFOCache(BaseCaching):
+    """ Defining the FIFO Caching Model """
+
+    def __init__(self):
+        """ Ini"""

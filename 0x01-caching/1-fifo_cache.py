@@ -11,4 +11,4 @@ class FIFOCache(BaseCaching):
         """ Initializing the Parent Class """
         super().__init__()
 
-    def 
+    def put(self, key, item):

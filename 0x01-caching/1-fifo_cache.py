@@ -12,3 +12,6 @@ class FIFOCache(BaseCaching):
         super().__init__()
 
     def put(self, key, item):
+        """ Adds an item to the cache using a key """
+        if key and item:
+            

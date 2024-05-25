@@ -6,7 +6,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class BasicCache(BaseCaching):
     """ Defining the BaseCache class """
-    Max_size = 
+    MAX_ITEMS = max()
     def __init__():
         """ Initialize the parent attributes """
         super()

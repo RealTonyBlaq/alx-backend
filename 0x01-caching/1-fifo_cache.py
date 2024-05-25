@@ -16,4 +16,4 @@ class FIFOCache(BaseCaching):
         if key and item:
             if len(self.cache_data) > self.MAX_ITEMS:
                 fifo_key = next(iter(self.cache_data))
-                
+                self.cache_data.pop(fifo_key)

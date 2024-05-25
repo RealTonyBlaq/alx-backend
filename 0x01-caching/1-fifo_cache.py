@@ -15,8 +15,8 @@ class FIFOCache(BaseCaching):
         """ Adds an item to the cache using a key """
         if key and item:
             if key in self.cache_data.keys():
-                
-            if len(self.cache_data) > self.MAX_ITEMS:
+                self.cache_data[key] = item
+            elif len(self.cache_data) > self.MAX_ITEMS:
                 fifo_key = next(iter(self.cache_data))
                 self.cache_data.pop(fifo_key)
                 print(f'DISCARD: {fifo_key}')

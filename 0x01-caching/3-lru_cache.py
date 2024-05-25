@@ -20,8 +20,7 @@ class LRUCache(BaseCaching):
                 self.__LRU.add(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
-                lifo_key = list(iter(self.cache_data.keys()))[-1]
-                del self.cache_data[lifo_key]
+                
                 print(f'DISCARD: {lifo_key}')
                 self.cache_data[key] = item
             else:

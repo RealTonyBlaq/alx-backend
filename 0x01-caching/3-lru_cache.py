@@ -25,7 +25,7 @@ class LRUCache(BaseCaching):
                 least_used_key = self.__LRU.pop(0)
                 del self.cache_data[least_used_key]
                 print(f'DISCARD: {least_used_key}')
-                self.__LRU.add(key)
+                self.__LRU.append(key)
                 self.cache_data[key] = item
             else:
                 self.__LRU.discard(key)

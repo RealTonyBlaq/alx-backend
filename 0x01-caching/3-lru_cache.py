@@ -24,7 +24,8 @@ class LRUCache(BaseCaching):
                 print(f'DISCARD: {lifo_key}')
                 self.cache_data[key] = item
             else:
-                3-lru_cache.py
+                self.__LRU.discard(key)
+                self.__LRU.add(key)
                 self.cache_data[key] = item
 
     def get(self, key):

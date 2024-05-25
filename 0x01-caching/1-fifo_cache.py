@@ -19,4 +19,6 @@ class FIFOCache(BaseCaching):
                 self.cache_data.pop(fifo_key)
                 print(f'DISCARD: {fifo_key}')
             self.cache_data[key] = item
-        
+
+    def get(self, key):
+        """ Re"""

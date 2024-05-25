@@ -15,8 +15,8 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """ Adds an item to the cache using a key """
         if key and item:
-            
             if key in self.cache_data.keys():
+                
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
                 lifo_key = list(iter(self.cache_data.keys()))[-1]

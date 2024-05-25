@@ -22,7 +22,5 @@ class BasicCache(BaseCaching):
     def get(self, key):
         """ Returns the value associated with a key in cache_data"""
         if key:
-            value = self.cache_data.get(key)
-            if value:
-                return value
+            return self.cache_data.get(key)
         return None

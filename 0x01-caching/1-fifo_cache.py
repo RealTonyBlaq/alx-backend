@@ -14,6 +14,7 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """ Adds an item to the cache using a key """
         if key and item:
+            if key in self
             if len(self.cache_data) > self.MAX_ITEMS:
                 fifo_key = next(iter(self.cache_data))
                 self.cache_data.pop(fifo_key)
@@ -21,7 +22,7 @@ class FIFOCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        """ Retrieves the item associateed with a key in a cache """
+        """ Retrieves the item associated with a key in a cache """
         if key:
             return self.cache_data.get(key)
 

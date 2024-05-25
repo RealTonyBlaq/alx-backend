@@ -8,4 +8,7 @@ class FIFOCache(BaseCaching):
     """ Defining the FIFO Caching Model """
 
     def __init__(self):
-        """ Ini"""
+        """ Initializing the Parent Class """
+        super().__init__()
+
+    def 

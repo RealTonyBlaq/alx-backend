@@ -8,7 +8,8 @@ class BasicCache(BaseCaching):
     """ Defining the BaseCache class """
 
     def __init__():
-        """ Initial"""
+        """ Initialize the parent attributes """
+        super()
 
     def put(self, key, item):
         """

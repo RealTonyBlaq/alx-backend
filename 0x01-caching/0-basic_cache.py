@@ -7,5 +7,5 @@ BaseCaching = __import__('base_caching').BaseCaching
 class BasicCache(BaseCaching):
     """ Definind the BaseCache class """
 
-    def 
-    
+    def put(self, key, item):
+        """ Assidns value to """

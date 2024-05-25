@@ -22,7 +22,7 @@ class FIFOCache(BaseCaching):
                 print(f'DISCARD: {fifo_key}')
                 self.cache_data[key] = item
             else:
-                
+                self.cache_data[key] = item
 
     def get(self, key):
         """ Retrieves the item associated with a key in a cache """

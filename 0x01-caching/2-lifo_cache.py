@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-""" FIFO Caching Model """
+""" LIFO Caching Model """
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """ Defining the FIFO Caching Model """
+    """ Defining the LIFO Caching Model """
 
     def __init__(self):
         """ Initializing the Parent Class """
@@ -17,9 +17,9 @@ class LIFOCache(BaseCaching):
             if key in self.cache_data.keys():
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
-                fifo_key = next(iter(self.cache_data))
-                del self.cache_data[fifo_key]
-                print(f'DISCARD: {fifo_key}')
+                lifo_key = list(iter(self.cache_data.keys()))[-1]
+                del self.cache_data[lifo_key]
+                print(f'DISCARD: {lifo_key}')
                 self.cache_data[key] = item
             else:
                 self.cache_data[key] = item

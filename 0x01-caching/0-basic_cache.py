@@ -6,7 +6,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class BasicCache(BaseCaching):
     """ Defining the BaseCache class """
-    MAX_ITEMS = max()
+
     def __init__():
         """ Initialize the parent attributes """
         super()
@@ -21,3 +21,5 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """ Returns the value associated with a key in cache_data"""
+        if key:
+            

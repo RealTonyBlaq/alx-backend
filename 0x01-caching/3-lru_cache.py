@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-""" LIFO Caching Model """
+""" LRU Caching Model """
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class LIFOCache(BaseCaching):
+class LRUCache(BaseCaching):
     """ Defining the LIFO Caching Model """
 
     def __init__(self):

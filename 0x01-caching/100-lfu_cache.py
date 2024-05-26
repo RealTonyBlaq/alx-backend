@@ -4,6 +4,9 @@
 BaseCaching = __import__('base_caching').BaseCaching
 
 
+def get
+
+
 class LFUCache(BaseCaching):
     """ Defining the LFU Caching Model """
 

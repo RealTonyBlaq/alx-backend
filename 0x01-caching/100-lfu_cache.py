@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-""" LRU Caching Model """
+""" LFU Caching Model """
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class LRUCache(BaseCaching):
-    """ Defining the LRU Caching Model """
+class LFUCache(BaseCaching):
+    """ Defining the LFU Caching Model """
 
     def __init__(self):
         """ Initializing the Parent Class """
         super().__init__()
-        self.__LRU = []
+        self.__LFU = []
 
     def put(self, key, item):
         """ Adds an item to the cache using a key """

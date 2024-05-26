@@ -17,7 +17,6 @@ class LFUCache(BaseCaching):
         if key and item:
             if key in self.cache_data.keys():
                 self.__LFU[key] += 1
-                self.__LFU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
                 lfu_key = self.__LFU.pop(0)
@@ -26,7 +25,7 @@ class LFUCache(BaseCaching):
                 self.__LFU.append(key)
                 self.cache_data[key] = item
             else:
-                self.__LFU.append(key)
+                self.__LFU[key]
                 self.cache_data[key] = item
 
     def get(self, key):

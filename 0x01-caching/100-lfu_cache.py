@@ -26,6 +26,7 @@ class LFUCache(BaseCaching):
             elif len(self.cache_data) >= self.MAX_ITEMS:
                 lfu_key = get_lfu_key(self.__LFU)
                 del self.cache_data[lfu_key]
+                del self.__LFU[]
                 print(f'DISCARD: {lfu_key}')
                 self.__LFU[key] = 1
                 self.cache_data[key] = item

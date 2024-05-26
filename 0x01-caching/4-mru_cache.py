@@ -26,7 +26,7 @@ class LRUCache(BaseCaching):
                 self.__MRU.append(key)
                 self.cache_data[key] = item
             else:
-                self.__LRU.append(key)
+                self.__MRU.append(key)
                 self.cache_data[key] = item
 
     def get(self, key):

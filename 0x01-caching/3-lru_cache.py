@@ -16,8 +16,7 @@ class LRUCache(BaseCaching):
         """ Adds an item to the cache using a key """
         if key and item:
             if key in self.cache_data.keys():
-                index = self.__LRU.index(key)
-                self.__LRU.pop(index)
+                self.__LRU.remove(key)
                 self.__LRU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:

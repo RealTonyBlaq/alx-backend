@@ -6,7 +6,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 def get_lfu_key(lfu_dict):
     """ Returns the key with the lowest use count """
-    sorted_dict = sorted(lfu_dict, key=lambda )
+    sorted_ = sorted(lfu_dict, key=lambda x)
 
 
 class LFUCache(BaseCaching):

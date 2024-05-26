@@ -20,9 +20,9 @@ class LRUCache(BaseCaching):
                 self.__MRU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
-                least_used_key = self.__MRU.pop()
-                del self.cache_data[least_used_key]
-                print(f'DISCARD: {least_used_key}')
+                recent_used_key = self.__MRU.pop()
+                del self.cache_data[recent_used_key]
+                print(f'DISCARD: {recent_used_key}')
                 self.__MRU.append(key)
                 self.cache_data[key] = item
             else:

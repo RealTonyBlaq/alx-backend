@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-""" LRU Caching Model """
+""" MRU Caching Model """
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LRUCache(BaseCaching):
-    """ Defining the LIFO Caching Model """
+    """ Defining the MRU Caching Model """
 
     def __init__(self):
         """ Initializing the Parent Class """

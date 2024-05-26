@@ -6,11 +6,11 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LRUCache(BaseCaching):
     """ Defining the LIFO Caching Model """
-    __LRU = []
 
     def __init__(self):
         """ Initializing the Parent Class """
         super().__init__()
+        self.__LRU = []
 
     def put(self, key, item):
         """ Adds an item to the cache using a key """

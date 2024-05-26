@@ -10,7 +10,7 @@ def get_lfu_key(lfu_dict):
     return sorted_[0][0]
 
 class LFUCache(BaseCaching):
-    """ Defining the LFU Caching Model """
+    """ Defining the LFU Caching Model. """
 
     def __init__(self):
         """ Initializing the Parent Class """

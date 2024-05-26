@@ -33,7 +33,7 @@ class LRUCache(BaseCaching):
     def get(self, key):
         """ Retrieves the item associated with a key in a cache """
         if key:
-            if key in self.cache_data.items():
+            if key in self.cache_data:
                 index = self.__LRU.index(key)
                 self.__LRU.pop(index)
                 self.__LRU.append(key)

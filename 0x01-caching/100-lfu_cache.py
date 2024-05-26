@@ -25,7 +25,7 @@ class LFUCache(BaseCaching):
                 self.__LFU.append(key)
                 self.cache_data[key] = item
             else:
-                self.__LFU[key]
+                self.__LFU[key] = 1
                 self.cache_data[key] = item
 
     def get(self, key):
@@ -33,7 +33,7 @@ class LFUCache(BaseCaching):
         if key:
             if key in self.cache_data:
                 self.__LFU.remove(key)
-                self.__LFU.append(key)
+                self.__LFU[key] += 1
             return self.cache_data.get(key)
 
         return None

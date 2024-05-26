@@ -37,7 +37,7 @@ class LRUCache(BaseCaching):
             if key in self.cache_data.items():
                 index = self.__LRU.index(key)
                 self.__LRU.pop(index)
-                self.__LRU.add(key)
+                self.__LRU.append(key)
             return self.cache_data.get(key)
 
         return None

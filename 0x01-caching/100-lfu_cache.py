@@ -10,13 +10,13 @@ class LFUCache(BaseCaching):
     def __init__(self):
         """ Initializing the Parent Class """
         super().__init__()
-        self.__LFU = []
+        self.__LFU = {}
 
     def put(self, key, item):
         """ Adds an item to the cache using a key """
         if key and item:
             if key in self.cache_data.keys():
-                self.__LFU.remove(key)
+                self.__LFU[key]
                 self.__LFU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:

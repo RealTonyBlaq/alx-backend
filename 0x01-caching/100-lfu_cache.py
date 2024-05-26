@@ -27,7 +27,7 @@ class LFUCache(BaseCaching):
                 lfu_key = get_lfu_key(self.__LFU)
                 del self.cache_data[lfu_key]
                 print(f'DISCARD: {lfu_key}')
-                self.__LFU.append(key)
+                self.__LFU[key] = 1
                 self.cache_data[key] = item
             else:
                 self.__LFU[key] = 1

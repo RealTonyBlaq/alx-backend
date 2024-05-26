@@ -33,8 +33,8 @@ class LFUCache(BaseCaching):
         """ Retrieves the item associated with a key in a cache """
         if key:
             if key in self.cache_data:
-                self.__LRU.remove(key)
-                self.__LRU.append(key)
+                self.__LFU.remove(key)
+                self.__LFU.append(key)
             return self.cache_data.get(key)
 
         return None

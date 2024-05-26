@@ -9,6 +9,7 @@ def get_lfu_key(lfu_dict):
     sorted_ = sorted(lfu_dict.items(), key=lambda y: y[1])
     return sorted_[0][0]
 
+
 class LFUCache(BaseCaching):
     """ Defining the LFU Caching Model. """
 

@@ -16,11 +16,11 @@ class LFUCache(BaseCaching):
         """ Adds an item to the cache using a key """
         if key and item:
             if key in self.cache_data.keys():
-                self.__LRU.remove(key)
-                self.__LRU.append(key)
+                self.__LFU.remove(key)
+                self.__LFU.append(key)
                 self.cache_data[key] = item
             elif len(self.cache_data) >= self.MAX_ITEMS:
-                least_used_key = self.__LRU.pop(0)
+                least_used_key = self.__LFU.pop(0)
                 del self.cache_data[least_used_key]
                 print(f'DISCARD: {least_used_key}')
                 self.__LRU.append(key)

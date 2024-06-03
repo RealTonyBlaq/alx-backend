@@ -63,7 +63,8 @@ class Server:
         prev_page = page - 1
         if next_page > len(self.__dataset) - 1:
             next_page = None
-        if prev_page 
+        if prev_page < 1:
+            
         return {
             "page_size": page_size,
             "page": page,

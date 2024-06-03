@@ -62,7 +62,7 @@ class Server:
         dataset = self.get_page(page, page_size)
         next_page = page + 1
         prev_page = page - 1
-        if next_page > len(self.__dataset) - 1:
+        if next_page >= len(self.__dataset):
             next_page = None
         if prev_page < 1:
             prev_page = None

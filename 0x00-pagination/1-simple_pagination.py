@@ -43,5 +43,6 @@ class Server:
         """ Returns the list of rows after pagination """
         assert type(page) == int and type(page_size) == int
         assert page_size > 0 and page > 0
-        range_ = index_range(page, page_size)
+        start, end = index_range(page, page_size)
+
         

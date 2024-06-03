@@ -65,5 +65,5 @@ class Server:
             "data": dataset,
             "next_page": page + 1,
             "prev_page": page - 1,
-            "total_pages": page_size * page
+            "total_pages": len(self.__dataset) - (page_size * page)
         }

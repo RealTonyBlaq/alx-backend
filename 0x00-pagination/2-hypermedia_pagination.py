@@ -58,4 +58,4 @@ class Server:
         prev_page: number of the previous page, None if no previous page
         total_pages: the total number of pages in the dataset as an integer
         """
-        k
+        return {}

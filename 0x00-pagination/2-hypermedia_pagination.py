@@ -47,7 +47,7 @@ class Server:
 
         return self.dataset()[start:end]
 
-    def get_hyper(page: int = 1, page_size: int = 1) -> Dict:
+    def get_hyper(self, page: int = 1, page_size: int = 1) -> Dict:
         """
         Returns a dictionary containing the following key-value pairs:
 
@@ -58,4 +58,6 @@ class Server:
         prev_page: number of the previous page, None if no previous page
         total_pages: the total number of pages in the dataset as an integer
         """
-        return {"page_size": len(self.get)}
+        return {
+            "page_size": len(self.get_page(page, page_size)),
+            }

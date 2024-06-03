@@ -63,5 +63,7 @@ class Server:
             "page_size": len(dataset),
             "page": page,
             "data": dataset,
-            "next_page": 
+            "next_page": page + 1,
+            "prev_page": page - 1,
+            "total_pages"
         }

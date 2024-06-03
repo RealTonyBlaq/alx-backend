@@ -47,4 +47,4 @@ class Server:
 
         return self.dataset()[start:end]
 
-    def 
+    def get_hyper(page: int = 1, page_size: int = 1)

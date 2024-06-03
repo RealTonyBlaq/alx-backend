@@ -60,7 +60,7 @@ class Server:
         """
         dataset = self.get_page(page, page_size)
         next_page = page + 1
-        if next_page > len()
+        if next_page > len(self.__dataset)
         return {
             "page_size": page_size,
             "page": page,

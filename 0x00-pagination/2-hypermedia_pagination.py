@@ -60,4 +60,6 @@ class Server:
         """
         return {
             "page_size": len(self.get_page(page, page_size)),
-            }
+            "page": page,
+            
+        }

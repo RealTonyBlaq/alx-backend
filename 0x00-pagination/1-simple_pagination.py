@@ -41,7 +41,7 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """ Returns the list of rows after pagination """
-        assert type(page) == int and type(page_size) == int
+        assert type(page) is int and type(page_size) is int
         assert page_size > 0 and page > 0
         start, end = index_range(page, page_size)
 

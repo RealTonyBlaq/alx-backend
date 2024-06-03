@@ -60,12 +60,13 @@ class Server:
         """
         dataset = self.get_page(page, page_size)
         next_page = page + 1
-        if next_page > len(self.__dataset)
+        if next_page > len(self.__dataset) - 1:
+            next_page = None
         return {
             "page_size": page_size,
             "page": page,
             "data": dataset,
-            "next_page": page + 1,
+            "next_page": next_page,
             "prev_page": page - 1,
             "total_pages": len(self.__dataset)
         }

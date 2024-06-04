@@ -56,7 +56,7 @@ class Server:
         dataset = self.indexed_dataset()
         assert index <= len(dataset)
         next_index = index + page_size
-        
+    
         return {
             'index': index,
             'next_index': next_index,

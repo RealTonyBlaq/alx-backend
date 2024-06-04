@@ -59,7 +59,8 @@ class Server:
         page_data = []
         for i in range(index, next_index):
             if dataset[f'{i}']:
-                
+                page_data.append(dataset[f'{i}'])
+            else:
         
         return {
             'index': index,

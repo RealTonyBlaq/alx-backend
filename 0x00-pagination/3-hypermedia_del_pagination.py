@@ -58,7 +58,8 @@ class Server:
         next_index = index + page_size
         page_data = []
         for i in range(index, next_index):
-            
+            if dataset[f'{i}']:
+                
         
         return {
             'index': index,

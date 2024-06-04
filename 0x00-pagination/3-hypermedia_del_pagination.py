@@ -54,6 +54,7 @@ class Server:
         data: the actual page of the dataset
         """
         dataset = self.indexed_dataset()
+        print(type(dataset))
         assert index <= len(dataset)
         next_index = index + page_size
         page_data = []

@@ -53,13 +53,13 @@ class Server:
         page_size: the current page size
         data: the actual page of the dataset
         """
-        assert index <= len(self.indexed_dataset())
+        dataset = self.indexed_dataset()
+        assert index <= len(dataset)
         next_index = index + page_size
-        
         
         return {
             'index': index,
             'next_index': next_index,
             'page_size': page_size,
-            'data': 
+            'data': dataset[]
         }

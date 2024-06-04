@@ -54,13 +54,12 @@ class Server:
         data: the actual page of the dataset
         """
         dataset = self.indexed_dataset()
-        print(type(dataset))
         assert index <= len(dataset)
         next_index = index + page_size
         page_data = []
         for i in range(index, next_index):
-            if dataset[f'{i}']:
-                page_data.append(dataset[f'{i}'])
+            if dataset[i]:
+                page_data.append(dataset[f'{i])
             else:
                 next_index += 1
         

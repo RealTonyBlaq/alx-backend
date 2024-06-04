@@ -56,11 +56,11 @@ class Server:
         dataset = self.indexed_dataset()
         assert index <= len(dataset)
         next_index = index + page_size
-        page_data = [dataset[str(i)] for i]
+        page_data = [dataset[str(i)] for i in range(index, next_index)]
         
         return {
             'index': index,
             'next_index': next_index,
             'page_size': page_size,
-            'data': 
+            'data': pag
         }

@@ -58,9 +58,9 @@ class Server:
         next_index = index + page_size
         page_data = []
         for i in range(index, next_index):
-            if dataset[i]:
-                page_data.append(dataset[f'{i])
-            else:
+            try:
+                page_data.append(dataset[i])
+            except KeyError:
                 next_index += 1
         
         return {

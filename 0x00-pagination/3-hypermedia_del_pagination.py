@@ -57,7 +57,7 @@ class Server:
         assert index <= len(dataset)
         next_index = index + page_size
         page_data = []
-        for 
+        for i in range()
         
         return {
             'index': index,

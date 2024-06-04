@@ -53,6 +53,7 @@ class Server:
         page_size: the current page size
         data: the actual page of the dataset
         """
+        
         return {
-            'index': 
+            'index': index,
         }

@@ -62,7 +62,7 @@ class Server:
                 page_data.append(dataset[i])
             except KeyError:
                 next_index += 1
-        
+
         return {
             'index': index,
             'next_index': next_index,

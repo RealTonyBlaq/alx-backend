@@ -61,6 +61,7 @@ class Server:
             if dataset[f'{i}']:
                 page_data.append(dataset[f'{i}'])
             else:
+                next_index += 1
         
         return {
             'index': index,

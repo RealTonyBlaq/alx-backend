@@ -30,7 +30,6 @@ def home():
     return render_template('1-index.html')
 
 
-config = Config()
 app.config.from_object(config)
 
 if __name__ == "__main__":

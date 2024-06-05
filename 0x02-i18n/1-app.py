@@ -16,4 +16,7 @@ class Config:
     @babel.default_locale
     def default_locale(self):
         """ Sets Babel's default locale """
-        return 
+        return "en"
+
+    @babel.default_timezone
+    def timezone

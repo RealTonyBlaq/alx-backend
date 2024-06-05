@@ -9,4 +9,5 @@ app = Flask(__name__)
 
 @app.route('/', strick_slashes=False)
 def home():
-    """ Retu"""
+    """ Renders a template """
+    

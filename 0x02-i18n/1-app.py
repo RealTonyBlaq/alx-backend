@@ -13,8 +13,8 @@ class Config:
     """ Defining the Babel config class """
     LANGUAGES = ["en", "fr"]
 
-    @babel.locale_selector_func
-    def default_locale(self):
+    @babel
+    def locale(self):
         """ Sets Babel's default locale """
         return "en"
 

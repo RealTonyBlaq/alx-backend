@@ -19,4 +19,6 @@ class Config:
         return "en"
 
     @babel.default_timezone
-    def timezone
+    def timezone(self):
+        """ sets the default timezone """
+        return "UTC"

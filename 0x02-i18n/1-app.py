@@ -24,4 +24,7 @@ class Config:
         return "UTC"
 
 
-@app.route()
+@app.route('/', strict_slashes=False)
+def home():
+    """ Returns the 1-index.html template """
+    

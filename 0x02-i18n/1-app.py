@@ -23,4 +23,5 @@ class Config:
         """ sets the default timezone """
         return "UTC"
 
-babel.
+
+@app.route()

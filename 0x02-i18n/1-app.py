@@ -10,3 +10,5 @@ babel = Babel(app)
 
 
 class Config:
+    """ Defining the Babel config class """
+    LANGUAGES = []

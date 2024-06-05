@@ -15,24 +15,14 @@ class Config:
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
-    @babel.localeselector
-    def locale(self):
-        """ Sets Babel's default locale """
-        return "en"
 
-    @babel.timezoneselector
-    def timezone(self):
-        """ sets the default timezone """
-        return "UTC"
+app.config.from_object(Config)
 
 
 @app.route('/', strict_slashes=False)
 def home():
     """ Returns the 1-index.html template """
     return render_template('1-index.html')
-
-
-app.config.from_object(Config)
 
 
 if __name__ == "__main__":

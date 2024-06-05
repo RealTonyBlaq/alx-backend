@@ -13,12 +13,12 @@ class Config:
     """ Defining the Babel config class """
     LANGUAGES = ["en", "fr"]
 
-    @babel.default_locale
+    @babel.locale_selector_func
     def default_locale(self):
         """ Sets Babel's default locale """
         return "en"
 
-    @babel.default_timezone
+    @babel.timezone_selector_func
     def timezone(self):
         """ sets the default timezone """
         return "UTC"

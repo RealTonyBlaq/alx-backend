@@ -15,4 +15,5 @@ class Config:
 
     @babel.default_locale
     def default_locale(self):
-        """ Sets Babel's default """
+        """ Sets Babel's default locale """
+        return 

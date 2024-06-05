@@ -7,7 +7,8 @@ from flask_babel import Babel
 
 app = Flask(__name__)
 babel = Babel(app)
-app.config.
+app.config.from_mapping()
+
 
 class Config:
     """ Defining the Babel config class """

@@ -7,7 +7,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/', strick_slashes=False)
+@app.route('/', strict_slashes=False)
 def home():
     """ Renders a template """
     return render_template('index.html')

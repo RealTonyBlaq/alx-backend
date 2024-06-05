@@ -20,7 +20,9 @@ app.config.from_object(Config)
 
 
 @babel.localeselector
-()
+def get_locale():
+    """ Determines the best Language """
+    return 
 
 
 @app.route('/', strict_slashes=False)

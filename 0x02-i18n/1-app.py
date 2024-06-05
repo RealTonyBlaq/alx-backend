@@ -22,3 +22,5 @@ class Config:
     def timezone(self):
         """ sets the default timezone """
         return "UTC"
+
+babel.

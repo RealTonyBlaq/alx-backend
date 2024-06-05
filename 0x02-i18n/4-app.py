@@ -26,7 +26,7 @@ def get_locale() -> str:
     if locale and locale in app.config['LANGUAGES']:
         return locale
 
-    return request.accept_languages.best_match(Config.LANGUAGES)
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route('/', strict_slashes=False)

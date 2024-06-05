@@ -10,5 +10,9 @@ app = Flask(__name__)
 @app.route('/', strick_slashes=False)
 def home():
     """ Renders a template """
-    ren
+    return render_template('index.html')
+
+
+
+if __name__ == ""
     

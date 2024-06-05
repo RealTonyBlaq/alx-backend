@@ -14,4 +14,5 @@ class Config:
     LANGUAGES = ["en", "fr"]
 
     @babel.default_locale
-    def 
+    def default_locale(self):
+        """ Sets Babel's default """

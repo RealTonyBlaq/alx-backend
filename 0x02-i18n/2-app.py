@@ -19,6 +19,10 @@ class Config:
 app.config.from_object(Config)
 
 
+@babel.localeselector
+()
+
+
 @app.route('/', strict_slashes=False)
 def home():
     """ Returns the 1-index.html template """

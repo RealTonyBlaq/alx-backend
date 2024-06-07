@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Babel """
 
-from flask import Flask, request, render_template
+from flask import Flask, g, request, render_template
 from flask_babel import Babel
 from typing import Dict, Union
 
@@ -39,7 +39,15 @@ def get_locale() -> str:
 
 def get_user() -> Union[None, Dict]:
     """ Returns a user dictionary """
-    user_id = request.args.get('login_as')
+    user_id = int(request.args.get('login_as'))
+    if user_id and user_id in users:
+        return users[user_id]
+
+    return None
+
+
+@app.before_request
+def before_request()
 
 @app.route('/', strict_slashes=False)
 def home():

@@ -3,7 +3,7 @@
 
 from flask import Flask, g, request, render_template
 from flask_babel import Babel
-from typing import Dict, Optional
+from typing import Dict
 
 
 app = Flask(__name__)
@@ -37,7 +37,7 @@ def get_locale() -> str:
     return request.accept_languages.best_match(Config.LANGUAGES)
 
 
-def get_user() -> Optional[Dict]:
+def get_user() -> Dict:
     """ Retrieves a user dictionary """
     try:
         user_id = int(request.args.get('login_as'))

@@ -47,7 +47,8 @@ def get_user() -> Union[None, Dict]:
 
 
 @app.before_request
-def before_request()
+def before_request():
+    """ Executed before """
 
 @app.route('/', strict_slashes=False)
 def home():

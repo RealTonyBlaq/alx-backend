@@ -43,8 +43,8 @@ def get_user() -> Union[None, Dict]:
         user_id = int(request.args.get('login_as'))
     except (ValueError, TypeError):
         return None
-    if user_id and user_id in users:
-        return users[user_id]
+
+    return users(user_id)
 
 
 @app.before_request

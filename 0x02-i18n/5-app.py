@@ -3,7 +3,7 @@
 
 from flask import Flask, request, render_template
 from flask_babel import Babel
-from typing import D
+from typing import Dict, Union
 
 
 app = Flask(__name__)
@@ -37,7 +37,8 @@ def get_locale() -> str:
     return request.accept_languages.best_match(Config.LANGUAGES)
 
 
-def get_user() -> 
+def get_user() -> Union[None, Dict]:
+    """ Returns a """
 
 @app.route('/', strict_slashes=False)
 def home():

@@ -48,7 +48,9 @@ def get_user() -> Union[None, Dict]:
 
 @app.before_request
 def before_request():
-    """ Executed before """
+    """
+    Executed before other functions and sets user on global to flask.g.user
+    """
 
 @app.route('/', strict_slashes=False)
 def home():

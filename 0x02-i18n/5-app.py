@@ -40,7 +40,8 @@ def get_locale() -> str:
 def get_user() -> Union[None, Dict]:
     """ Returns a user dictionary """
     try:
-    user_id = int(request.args.get('login_as'))
+        user_id = int(request.args.get('login_as'))
+    except ValueError, Type
     if user_id and user_id in users:
         return users[user_id]
 

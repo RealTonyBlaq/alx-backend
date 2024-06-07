@@ -38,7 +38,7 @@ def get_locale() -> str:
 
 
 def get_user() -> Optional[Dict]:
-    """ Returns a user dictionary """
+    """ Retrieves a user dictionary """
     try:
         user_id = int(request.args.get('login_as'))
     except (ValueError, TypeError):

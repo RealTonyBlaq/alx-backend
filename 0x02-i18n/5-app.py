@@ -38,7 +38,8 @@ def get_locale() -> str:
 
 
 def get_user() -> Union[None, Dict]:
-    """ Returns a """
+    """ Returns a user dictionary """
+    
 
 @app.route('/', strict_slashes=False)
 def home():

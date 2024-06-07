@@ -52,7 +52,8 @@ def before_request():
     Executed before other functions and sets user on global to flask.g.user
     """
     user = get_user()
-    setattr(g, 'user', user)
+    if user:
+        setattr(g, 'user', user)
 
 @app.route('/', strict_slashes=False)
 def home():

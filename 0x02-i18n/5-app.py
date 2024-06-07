@@ -39,7 +39,7 @@ def get_locale() -> str:
 
 def get_user() -> Union[None, Dict]:
     """ Returns a user dictionary """
-    
+    user_id = request.args.get('')
 
 @app.route('/', strict_slashes=False)
 def home():

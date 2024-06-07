@@ -57,6 +57,8 @@ def before_request():
 @app.route('/', strict_slashes=False)
 def home():
     """ Returns the 1-index.html template """
+    if g.user:
+        return render_template('5-index.html', user=g.user)
     return render_template('5-index.html')
 
 

@@ -44,7 +44,7 @@ def get_user() -> Union[None, Dict]:
     except (ValueError, TypeError):
         return None
 
-    return users(user_id)
+    return users.get(user_id)
 
 
 @app.before_request

@@ -50,6 +50,7 @@ def get_locale() -> str:
 @babel.timezoneselector
 def get_timezone():
     """ Sets the timezone """
+    # Setting timezone from URL parameters
     timezone = request.args.get('timezone')
     if timezone:
         try:
@@ -58,14 +59,17 @@ def get_timezone():
         except pytz.exceptions.UnknownTimeZoneError:
             pass
 
-    timezone = g.user.get('timezone')
-    if timezone:
-        try:
-            pytz.timezone(timezone)
-            return timezone
-        except pytz.exceptions.UnknownTimeZoneError:
-            pass
+    # Setting timezone from user settings
+    if g.user:
+        timezone = g.user.get('timezone')
+        if timezone:
+            try:
+                pytz.timezone(timezone)
+                return timezone
+            except pytz.exceptions.UnknownTimeZoneError:
+                pass
 
+    # Default timezone setting
     return Config.BABEL_DEFAULT_TIMEZONE
 
 

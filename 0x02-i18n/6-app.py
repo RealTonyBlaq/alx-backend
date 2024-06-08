@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """ Babel """
 
-from flask import Flask, g, request, render_template
 from flask_babel import Babel
+from typing import Dict
+from flask import Flask, g, request, render_template
 
 
 app = Flask(__name__)
-
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
@@ -46,7 +46,7 @@ def get_locale() -> str:
     return request.accept_languages.best_match(Config.LANGUAGES)
 
 
-def get_user():
+def get_user() -> Dict:
     """ Retrieves a user dictionary """
     try:
         user_id = int(request.args.get('login_as'))

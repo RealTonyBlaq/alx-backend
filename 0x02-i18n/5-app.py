@@ -7,6 +7,7 @@ from flask_babel import Babel
 
 app = Flask(__name__)
 
+
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
@@ -36,7 +37,7 @@ def get_locale() -> str:
     return request.accept_languages.best_match(Config.LANGUAGES)
 
 
-def get_user():
+def get_user() -> dict:
     """ Retrieves a user dictionary """
     try:
         user_id = int(request.args.get('login_as'))
@@ -56,7 +57,7 @@ def before_request():
 
 @app.route('/', strict_slashes=False)
 def home():
-    """ Returns the 1-index.html template """
+    """ Returns the 5-index.html template """
     return render_template('5-index.html')
 
 

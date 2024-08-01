@@ -1,5 +1,5 @@
 import { createClient } from "redis";
-import { RedisClient, print } from "redis";
+import print from "redis";
 
 const client = createClient();
 

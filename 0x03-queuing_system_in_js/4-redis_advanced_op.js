@@ -16,7 +16,7 @@ async function redisOperations() {
       else console.log(reply);
     });
 
-    \
+  client.hGetAll('HolbertonSchools')
   client.quit();
 }
 

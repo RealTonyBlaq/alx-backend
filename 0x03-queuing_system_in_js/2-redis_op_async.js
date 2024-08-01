@@ -19,7 +19,7 @@ async function redisOperations() {
     }
   }
 
-  promisify(displaySchoolValue) = (schoolName) => {
+  const displaySchoolValue = (schoolName) => {
     try {
       const value = client.get(schoolName);
       return value;

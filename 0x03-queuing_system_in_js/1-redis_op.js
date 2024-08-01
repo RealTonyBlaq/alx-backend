@@ -1,4 +1,5 @@
-import { createClient, print } from "redis";
+import { createClient } from "redis";
+import { RedisClient, print } from "redis";
 
 const client = createClient();
 
@@ -18,6 +19,9 @@ const displaySchoolValue = (schoolName) => {
   console.log(value);
 }
 
-
+/* Tests */
+displaySchoolValue('Holberton');
+setNewSchool('HolbertonSanFrancisco', '100');
+displaySchoolValue('HolbertonSanFrancisco');
 
 await client.disconnect();

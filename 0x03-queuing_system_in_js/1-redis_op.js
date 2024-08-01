@@ -10,17 +10,14 @@ await client.connect();
 const setNewSchool = async (schoolName, value) => {
   await client.set(schoolName, value, (err, reply) => {
     if (err) console.error(err);
-else console.log(reply);
+    else console.log(reply);
   });
 }
 
 const displaySchoolValue = async (schoolName) => {
   await client.get(schoolName, (err, value) => {
-    if (err) {
-      console.error(`Error getting value: ${err}`);
-    } else {
-      console.log(value);
-    }
+    if (err) console.error(err);
+    else console.log(value);
   });
 }
 

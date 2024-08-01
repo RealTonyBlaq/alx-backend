@@ -9,7 +9,7 @@ async function redisOperations() {
 
   await client.connect();
 
-  client.hSet('')
+  client.hSet('HolbertonSchools', )
 
   client.quit();
 }

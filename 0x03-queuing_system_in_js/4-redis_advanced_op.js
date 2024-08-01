@@ -9,7 +9,7 @@ async function redisOperations() {
 
   await client.connect();
 
-  client.hSet('HolbertonSchools', ['Portland', 50, 'Seattle', 80, ])
+  client.hSet('HolbertonSchools', ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota'])
 
   client.quit();
 }

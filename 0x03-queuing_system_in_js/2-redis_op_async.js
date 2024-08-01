@@ -19,9 +19,9 @@ async function redisOperations() {
     }
   }
 
-  const displaySchoolValue = (schoolName) {
+  promisify(displaySchoolValue) = (schoolName) => {
     try {
-      const value = await display(schoolName);
+      const value = client;
       return value;
     } catch (err) {
       console.error(err);

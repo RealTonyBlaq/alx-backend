@@ -19,9 +19,9 @@ async function redisOperations() {
     }
   }
 
-  const displaySchoolValue = (schoolName) => {
+  const displaySchoolValue = async (schoolName) => {
     try {
-      const value = client.get(schoolName);
+      const value = await client.get(schoolName);
       return value;
     } catch (err) {
       console.error(err);

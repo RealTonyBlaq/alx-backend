@@ -18,14 +18,15 @@ async function redisOperations() {
     Paris: 2
   }
 
-  Object.keys(values).forEach((key))
-  try {
-  const reply = await client.hSet('HolbertonSchools',
-    ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]);
-    console.log(reply);
-  } catch (err) {
-    console.log(err);
-  }
+  Object.keys(values).forEach((key) => {
+    try {
+      const reply = client.hSet('HolbertonSchools',
+          ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]);
+          console.log(reply);
+        } catch (err) {
+          console.log(err);
+        }
+  });
 
   try {
     const value = await client.hGetAll('HolbertonSchools');

@@ -16,7 +16,9 @@ async function redisOperations() {
       else console.log(reply);
     });
 
-  client.hGetAll('HolbertonSchools')
+  try {
+  client.hGetAll('HolbertonSchools');
+  
   client.quit();
 }
 

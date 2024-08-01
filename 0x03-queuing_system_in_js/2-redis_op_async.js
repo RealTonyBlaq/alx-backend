@@ -23,7 +23,7 @@ async function redisOperations() {
 
   const displaySchoolValue = async (schoolName) => {
     try {
-      const value = client.get(schoolName);
+      const value = await display(schoolName);
       return value;
     } catch (err) {
       console.error(err);

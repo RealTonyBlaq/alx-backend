@@ -17,7 +17,7 @@ async function redisOperations() {
     });
 
   try {
-    const value = client.hGetAll('HolbertonSchools');
+    const value = await client.hGetAll('HolbertonSchools');
     console.log(value);
   } catch (err) {
     console.log(err);

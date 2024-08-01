@@ -12,7 +12,10 @@ async function redisOperations() {
   const values = {
     Portland: 50,
     Seattle: 80,
-    New York
+    'New York': 20,
+    Bogota: 20,
+    Cali: 40,
+    
   }
   try {
   const reply = await client.hSet('HolbertonSchools',

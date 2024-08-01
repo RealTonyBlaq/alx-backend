@@ -9,9 +9,12 @@ async function redisOperations() {
 
   await client.connect();
 
+  try {
   const reply = await client.hSet('HolbertonSchools',
-    ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]
-    });
+    ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]);
+  } catch (err) {
+    console.log(err);
+  }
 
   try {
     const value = await client.hGetAll('HolbertonSchools');

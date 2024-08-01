@@ -11,8 +11,12 @@ async function redisOperations() {
 
   client.hSet('HolbertonSchools',
     ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2],
-    (err, reply) => {});
+    (err, reply) => {
+      if (err) console.log(err);
+      else console.log(reply);
+    });
 
+    \
   client.quit();
 }
 

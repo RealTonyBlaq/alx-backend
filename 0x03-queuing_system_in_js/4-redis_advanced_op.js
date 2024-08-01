@@ -17,8 +17,10 @@ async function redisOperations() {
     });
 
   try {
-  client.hGetAll('HolbertonSchools');
-  
+    const client.hGetAll('HolbertonSchools');
+  } catch (err) {
+    console.log(err);
+  }
   client.quit();
 }
 

@@ -9,8 +9,6 @@ async function redisOperations() {
 
   await client.connect();
 
-  const display = promisify(client.get).bind(client);
-
   const setNewSchool = (schoolName, value) => {
     try {
       const reply = client.set(schoolName, value);

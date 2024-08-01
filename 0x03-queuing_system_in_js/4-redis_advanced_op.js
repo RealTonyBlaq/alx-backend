@@ -17,10 +17,12 @@ async function redisOperations() {
     });
 
   try {
-    const client.hGetAll('HolbertonSchools');
+    const value = client.hGetAll('HolbertonSchools');
+    console.log(value);
   } catch (err) {
     console.log(err);
   }
+
   client.quit();
 }
 

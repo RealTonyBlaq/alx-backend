@@ -9,11 +9,8 @@ await client.connect();
 
 const setNewSchool = async (schoolName, value) => {
   await client.set(schoolName, value, (err, reply) => {
-    if (err) {
-      console.error(`Error setting value: ${err}`);
-    } else {
-      console.log(`Set value: ${reply}`);
-    }
+    if (err) console.error(err);
+else console.log(reply);
   });
 }
 

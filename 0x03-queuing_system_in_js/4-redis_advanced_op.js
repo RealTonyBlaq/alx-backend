@@ -20,12 +20,11 @@ async function redisOperations() {
 
   Object.keys(values).forEach((key) => {
     try {
-      const reply = client.hSet('HolbertonSchools',
-          ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]);
+      const reply = client.hSet('HolbertonSchools', key, values[key]);
           console.log(reply);
         } catch (err) {
           console.log(err);
-        }
+    }
   });
 
   try {

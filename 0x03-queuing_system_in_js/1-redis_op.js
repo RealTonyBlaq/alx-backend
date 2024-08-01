@@ -17,7 +17,7 @@ client.on('error', (err) => {
  * @param {string} value - The value to set for the key
  */
 function setNewSchool(schoolName, value) {
-  client.set(schoolName, value, print);
+  client.set(schoolName, value, redis.print);
 }
 
 /**

@@ -19,6 +19,8 @@ async function redisOperations() {
     }
   }
 
+  promisify(displaySchoolValue);
+
   const displaySchoolValue = async (schoolName) => {
     try {
       const value = await client.get(schoolName);

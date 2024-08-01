@@ -2,7 +2,7 @@ import { createClient } from "redis";
 import redis from "redis";
 
 const client = createClient();
-cons
+const print = redis.print
 
 client.on('error', (err) => console.log(`Redis client not connected to the server: ${err}`));
     

@@ -19,8 +19,6 @@ async function redisOperations() {
     }
   }
 
-  promisify(displaySchoolValue);
-
   const displaySchoolValue = async (schoolName) => {
     try {
       const value = await client.get(schoolName);
@@ -30,6 +28,8 @@ async function redisOperations() {
       throw err;
     }
   }
+
+  promisify(displaySchoolValue);
 
   /* Tests */
   console.log(await displaySchoolValue('Holberton'));

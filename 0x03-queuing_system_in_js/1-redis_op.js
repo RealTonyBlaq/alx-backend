@@ -1,4 +1,5 @@
-import { createClient, print } from 'redis';
+import { createClient } from 'redis';
+import redis from 'redis';
 
 const client = createClient();
 

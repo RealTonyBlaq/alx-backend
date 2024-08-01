@@ -21,9 +21,9 @@ async function redisOperations() {
   Object.keys(values).forEach((key) => {
     try {
       const reply = client.hSet('HolbertonSchools', key, values[key]);
-          console.log(reply);
-        } catch (err) {
-          console.log(err);
+      console.log(reply);
+    } catch (err) {
+      console.log(err);
     }
   });
 

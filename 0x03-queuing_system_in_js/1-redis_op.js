@@ -14,8 +14,8 @@ const setNewSchool = async (schoolName, value) => {
   });
 }
 
-const displaySchoolValue = async (schoolName) => {
-  await client.get(schoolName, (err, value) => {
+const displaySchoolValue = (schoolName) => {
+  client.get(schoolName, (err, value) => {
     if (err) console.error(err);
     else console.log(value);
   });

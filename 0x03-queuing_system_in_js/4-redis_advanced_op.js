@@ -1,5 +1,4 @@
 import { createClient } from "redis";
-import { promisify } from 'util';
 
 async function redisOperations() {
   const client = createClient();

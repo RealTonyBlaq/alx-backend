@@ -1,6 +1,6 @@
 import { createClient } from "redis";
 
-async function test_connection() {
+async function connection() {
   const client = createClient();
 
   client.on('error', (err) => console.log(`Redis client not connected to the server: ${err}`));
@@ -11,4 +11,4 @@ async function test_connection() {
   await client.disconnect();
 }
 
-test_connection();
+connection();

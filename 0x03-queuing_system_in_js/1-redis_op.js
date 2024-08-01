@@ -9,13 +9,13 @@ client.on('ready', () => console.log('Redis client connected to the server'));
 
 await client.connect();
 
-const setNewSchool = (schoolName, value) => {
+const setNewSchool = async (schoolName, value) => {
   await client.set(schoolName, value, print);
   
 }
 
-const displaySchoolValue = (schoolName) => {
-  client.get(schoolName, (value) => console.log(value));
+const displaySchoolValue = async (schoolName) => {
+  await client.get(schoolName, (value) => console.log(value));
 }
 
 /* Tests */

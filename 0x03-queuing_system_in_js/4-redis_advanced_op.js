@@ -18,7 +18,7 @@ async function redisOperations() {
     Paris: 2
   }
 
-  Object
+  Object.keys(values).forEach((key))
   try {
   const reply = await client.hSet('HolbertonSchools',
     ['Portland', 50, 'Seattle', 80, 'New York', 20, 'Bogota', 20, 'Cali', 40, 'Paris', 2]);

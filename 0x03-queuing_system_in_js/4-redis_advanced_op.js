@@ -10,7 +10,9 @@ async function redisOperations() {
   await client.connect();
 
   const values = {
-    'Portland'
+    Portland: 50,
+    Seattle: 80,
+    New York
   }
   try {
   const reply = await client.hSet('HolbertonSchools',

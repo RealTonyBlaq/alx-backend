@@ -8,7 +8,6 @@ async function redisOperations() {
 
   await client.connect();
 
-  client.su
   const values = {
     Portland: 50,
     Seattle: 80,

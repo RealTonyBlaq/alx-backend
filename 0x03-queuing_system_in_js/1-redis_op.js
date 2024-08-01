@@ -17,4 +17,5 @@ const displaySchoolValue = (schoolName) => {
   const value = client.get(schoolName);
   console.log(value);
 }
+
 await client.disconnect();

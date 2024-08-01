@@ -7,8 +7,8 @@ client.on('ready', () => console.log('Redis client connected to the server'));
 
 await client.connect();
 
-const setNewSchool = async (schoolName, value) => {
-  await client.set(schoolName, value, (err, reply) => {
+const setNewSchool = (schoolName, value) => {
+  client.set(schoolName, value, (err, reply) => {
     if (err) console.error(err);
     else console.log(reply);
   });

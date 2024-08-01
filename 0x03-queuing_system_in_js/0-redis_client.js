@@ -7,7 +7,7 @@ async function test_connection() {
     
     await client.connect()
     
-    client.on('connected', (stream) => console.log('Redis client connected to the server'));
+    client.on('ready', (stream) => console.log('Redis client connected to the server'));
     
     await client.disconnect();
 }

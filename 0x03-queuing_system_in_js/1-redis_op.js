@@ -10,7 +10,11 @@ await client.connect();
 
 const setNewSchool = (schoolName, value) => {
   client.set(schoolName, value);
+  
 }
 
-const displaySchoolValue = (schoolName) => {}
+const displaySchoolValue = (schoolName) => {
+  const value = client.get(schoolName);
+  console.log(value);
+}
 await client.disconnect();

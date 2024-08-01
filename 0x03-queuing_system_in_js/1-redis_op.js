@@ -23,8 +23,8 @@ const displaySchoolValue = (schoolName) => {
 }
 
 /* Tests */
-displaySchoolValue('Holberton');
-setNewSchool('HolbertonSanFrancisco', '100');
-displaySchoolValue('HolbertonSanFrancisco');
+await displaySchoolValue('Holberton');
+await setNewSchool('HolbertonSanFrancisco', '100');
+await displaySchoolValue('HolbertonSanFrancisco');
 
 await client.disconnect();

@@ -4,4 +4,6 @@ const queue = createQueue();
 
 const blackListedNumbers = [4153518780, 4153518781];
 
-function sendNotification() {}
+function sendNotification(phoneNumber, message, job, done) {
+  
+}

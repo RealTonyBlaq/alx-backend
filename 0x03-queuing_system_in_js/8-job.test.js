@@ -4,8 +4,9 @@ import { createQueue } from "kue";
 
 
 describe('Testing createPushNotificationJobs', () => {
-  const queue = createQueue();
+  let queue;
   beforeEach(() => {
+    queue = createQueue();
     queue.testMode.enter();
   });
 

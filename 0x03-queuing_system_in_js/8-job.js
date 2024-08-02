@@ -1,5 +1,3 @@
-import { createQueue } from "kue";
-
 function createPushNotificationsJobs(jobs, queue) {
   if (Array.isArray(jobs)) {
     jobs.forEach((value) => {
@@ -12,13 +10,13 @@ function createPushNotificationsJobs(jobs, queue) {
       job.on('failed', (err) => {
         console.log(`Notification job ${job.id} failed: ${err}`);
       });
-    
+
       job.on('progress', (percent) => {
         console.log(`Notification job ${job.id} ${percent}% complete`);
       });
     
       job.on('complete', () => {
-        
+        console.log(`Notification job ${job.id} completed`);
       });
     });
   } else {

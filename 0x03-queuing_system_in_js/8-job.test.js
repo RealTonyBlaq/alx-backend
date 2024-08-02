@@ -41,6 +41,6 @@ describe('Testing createPushNotificationJobs', () => {
     createPushNotificationsJobs(jobs, queue);
 
     expect(queue.testMode.jobs.length).to.equal(4);
-    expect(queue.testMode.jobs[0].)
+    expect(queue.testMode.jobs[0].complete()).to.be.true
   });
 });

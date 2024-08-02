@@ -8,7 +8,10 @@ function createPushNotificationsJobs(jobs, queue) {
           if (err) console.log(`Notification job ${job.id} failed: ${err}`);
           else console.log(`Notification job created: ${job.id}`);
         });
-        
+
+      job.on('failed', (err) => {
+
+      });
     });
   } else {
     throw new Error('Jobs is not an array');

@@ -14,7 +14,11 @@ function createPushNotificationsJobs(jobs, queue) {
       });
     
       job.on('progress', (percent) => {
-        console.log(`Notification job ${job.id} ${percent}% complete`)
+        console.log(`Notification job ${job.id} ${percent}% complete`);
+      });
+    
+      job.on('complete', () => {
+        
       });
     });
   } else {

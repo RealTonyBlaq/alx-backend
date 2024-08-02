@@ -28,11 +28,19 @@ describe('Testing createPushNotificationJobs', () => {
         phoneNumber: '4153518781',
         message: 'This is the code 4562 to verify your account'
       },
-      
+      {
+        phoneNumber: '4153518743',
+        message: 'This is the code 4321 to verify your account'
+      },
+      {
+        phoneNumber: '4153538781',
+        message: 'This is the code 4562 to verify your account'
+      }
     ];
 
     createPushNotificationsJobs(jobs, queue);
 
-    expect(queue.testMode.jobs.length).to.equal(2);
+    expect(queue.testMode.jobs.length).to.equal(4);
+    expect()
   });
 });

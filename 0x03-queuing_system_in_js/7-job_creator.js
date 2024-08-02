@@ -49,6 +49,7 @@ const jobs = [
   }
 ];
 
-jobs.forEach((job) => {
-  const job = queue.create('')
+jobs.forEach((value) => {
+  const job = queue.create('push_notification_code_2', value)
+    .save()
 });

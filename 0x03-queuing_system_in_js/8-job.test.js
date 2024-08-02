@@ -42,6 +42,6 @@ describe('Testing createPushNotificationJobs', () => {
 
     expect(queue.testMode.jobs.length).to.equal(4);
     expect(queue.testMode.jobs[0].data).to.equal(jobs[0]);
-    expect(queue.testMode.jobs[0].type).to.equal('');
+    expect(queue.testMode.jobs[0].type).to.equal('push_notification_code_3');
   });
 });

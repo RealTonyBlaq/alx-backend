@@ -15,4 +15,4 @@ function sendNotification(phoneNumber, message, job, done) {
   done();
 }
 
-queue.pr
+queue.process('push_notification_code_2', 2, ())

@@ -1,3 +1,3 @@
 import { createQueue } from "kue";
 
-const job = createQueue()
+const job = createQueue('')

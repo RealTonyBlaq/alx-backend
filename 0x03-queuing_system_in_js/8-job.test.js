@@ -32,6 +32,6 @@ describe('Testing createPushNotificationJobs', () => {
 
     createPushNotificationsJobs(jobs, queue);
 
-    
+    expect(queue.testMode.jobs.length).
   });
 });

@@ -65,6 +65,6 @@ jobs.forEach((value) => {
   });
 
   job.on('progress', (percent) => {
-    console.log(`Notification job  ${percent}% complete`);
+    console.log(`Notification job ${job.id} ${percent}% complete`);
   });
 });

@@ -10,7 +10,7 @@ function createPushNotificationsJobs(jobs, queue) {
         });
 
       job.on('failed', (err) => {
-
+        console.log(`Notification job ${job.id} failed: ${err}`);
       });
     });
   } else {

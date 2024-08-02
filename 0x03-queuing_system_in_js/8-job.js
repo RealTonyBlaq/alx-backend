@@ -1,4 +1,4 @@
-function createPushNotificationsJobs(jobs, queue) {
+export default function createPushNotificationsJobs(jobs, queue) {
   if (Array.isArray(jobs)) {
     jobs.forEach((value) => {
       const job = queue.create('push_notification_code_3', value)
@@ -14,7 +14,7 @@ function createPushNotificationsJobs(jobs, queue) {
       job.on('progress', (percent) => {
         console.log(`Notification job ${job.id} ${percent}% complete`);
       });
-    
+
       job.on('complete', () => {
         console.log(`Notification job ${job.id} completed`);
       });

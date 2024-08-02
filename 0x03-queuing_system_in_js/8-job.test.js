@@ -4,13 +4,14 @@ import { createQueue } from "kue";
 
 
 describe('Testing createPushNotificationJobs', () => {
+  const queue = createQueue();
   beforeEach(() => {
-    const queue = createQueue();
     queue.testMode.enter();
   });
 
   afterEach(() => {
-    queue.
+    queue.testMode.clear();
+    que
   });
   it('testing jobs created', () => {
     expect(createPushNotificationsJobs).to.be.call

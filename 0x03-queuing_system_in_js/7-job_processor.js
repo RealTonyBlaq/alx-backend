@@ -2,7 +2,7 @@ import { createQueue } from "kue";
 
 const queue = createQueue();
 
-const blackListedNumbers = [4153518780, 4153518781];
+const blackListedNumbers = ['4153518780', '4153518781'];
 
 function sendNotification(phoneNumber, message, job, done) {
   job.progress(0, 100);
@@ -18,5 +18,5 @@ function sendNotification(phoneNumber, message, job, done) {
 
 queue.process('push_notification_code_2', 2, (job, done) => {
   const { phoneNumber, message } = job.data;
-  sendNotification(phoneNumber, )
+  sendNotification(phoneNumber, message, job, done);
 })

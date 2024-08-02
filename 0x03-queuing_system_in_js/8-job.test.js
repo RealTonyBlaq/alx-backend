@@ -19,6 +19,8 @@ describe('Testing createPushNotificationJobs', () => {
   });
 
   it('testing the created jobs', () => {
-    
+    const jobs = [
+      {}
+    ]
   });
 });

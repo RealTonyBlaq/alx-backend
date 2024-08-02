@@ -49,4 +49,6 @@ const jobs = [
   }
 ];
 
-jobs.forEach((job))
+jobs.forEach((job) => {
+  const job = queue.create('')
+});

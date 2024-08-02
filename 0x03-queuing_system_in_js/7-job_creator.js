@@ -52,6 +52,6 @@ const jobs = [
 jobs.forEach((value) => {
   const job = queue.create('push_notification_code_2', value)
     .save((err) => {
-      
+      if (err) console.log(`Notification ${} failed: ${err}`);
     });
 });

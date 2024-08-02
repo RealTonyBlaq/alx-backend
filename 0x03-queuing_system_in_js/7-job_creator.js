@@ -6,14 +6,14 @@ const jobs = [
   {
     phoneNumber: '4153518781',
     message: 'This is the code 4562 to verify your account'
-    },
-    {
-      phoneNumber: '4153518743',
-      message: 'This is the code 4321 to verify your account'
-    },
-    {
-      phoneNumber: '4153538781',
-      message: 'This is the code 4562 to verify your account'
+  },
+  {
+    phoneNumber: '4153518743',
+    message: 'This is the code 4321 to verify your account'
+  },
+  {
+    phoneNumber: '4153538781',
+    message: 'This is the code 4562 to verify your account'
     },
     {
       phoneNumber: '4153118782',

@@ -48,3 +48,5 @@ const jobs = [
     message: 'This is the code 4321 to verify your account'
   }
 ];
+
+jobs.forEach((job))

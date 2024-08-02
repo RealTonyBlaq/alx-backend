@@ -9,7 +9,9 @@ describe('Testing createPushNotificationJobs', () => {
     queue.testMode.enter();
   });
 
-  afterEach(() => )
+  afterEach(() => {
+    queue.
+  });
   it('testing jobs created', () => {
     expect(createPushNotificationsJobs).to.be.call
   });

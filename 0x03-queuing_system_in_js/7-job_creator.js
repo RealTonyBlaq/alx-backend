@@ -61,6 +61,6 @@ jobs.forEach((value) => {
   });
 
   job.on('failed', (err) => {
-    console.log(`Notification job JOB_ID failed: ${err}`)
+    console.log(`Notification job ${} failed: ${err}`)
   });
 });

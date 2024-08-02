@@ -15,6 +15,6 @@ describe('Testing createPushNotificationJobs', () => {
   });
 
   it('testing jobs creation error', () => {
-    expect(createPushNotificationsJobs('Not an arry')).to.be.call
+    expect(createPushNotificationsJobs('Not an array')).to.throw('Jobs is not an array')
   });
 });

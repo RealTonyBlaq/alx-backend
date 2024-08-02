@@ -11,5 +11,6 @@ function sendNotification(phoneNumber, message, job, done) {
     done(new Error(`Phone number ${phoneNumber} is blacklisted`));
   }
 
-  
+  job.progress(50, 100);
+  done();
 }

@@ -8,6 +8,8 @@ function sendNotification(phoneNumber, message, job, done) {
   job.progress(0, 100);
 
   if (blackListedNumbers.includes(phoneNumber)) {
-    done(new Error(`Phone number PHONE_NUMBER is blacklisted`));
+    done(new Error(`Phone number ${phoneNumber} is blacklisted`));
   }
+
+  
 }

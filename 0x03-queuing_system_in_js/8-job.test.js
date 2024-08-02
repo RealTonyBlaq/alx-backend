@@ -21,11 +21,11 @@ describe('Testing createPushNotificationJobs', () => {
   it('testing the created jobs', () => {
     const jobs = [
       {
-        phoneNumber: '41535187810',
+        phoneNumber: '4153518789',
         message: 'This is the code 1234 to verify your account'
       },
       {
-        phoneNumber: '41535187810',
+        phoneNumber: '4153518790',
         message: 'This is the code 4562 to verify your account'
       },
       {

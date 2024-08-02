@@ -16,4 +16,7 @@ function sendNotification(phoneNumber, message, job, done) {
   done();
 }
 
-queue.process('push_notification_code_2', 2, (job, done) =)
+queue.process('push_notification_code_2', 2, (job, done) => {
+  
+  sendNotification()
+})

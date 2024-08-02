@@ -11,9 +11,10 @@ describe('Testing createPushNotificationJobs', () => {
 
   afterEach(() => {
     queue.testMode.clear();
-    que
+    queue.testMode.exit();
   });
-  it('testing jobs created', () => {
-    expect(createPushNotificationsJobs).to.be.call
+
+  it('testing jobs creation error', () => {
+    expect(createPushNotificationsJobs('Not an arry')).to.be.call
   });
 });

@@ -1,4 +1,4 @@
-import createPushNotificationsJobs from "./8-job";
+import createPushNotificationsJobs from "./8-job.js";
 import { expect } from "chai";
 import { createQueue } from "kue";
 

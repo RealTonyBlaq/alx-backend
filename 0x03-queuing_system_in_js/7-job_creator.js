@@ -55,4 +55,5 @@ jobs.forEach((value) => {
       if (err) console.log(`Notification ${job.id} failed: ${err}`);
       else console.log(`Notification job created: ${job.id}`);
     });
+    job.on('complete', ())
 });

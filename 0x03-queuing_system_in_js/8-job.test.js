@@ -15,9 +15,8 @@ describe('Testing createPushNotificationJobs', () => {
   });
 
   it('testing jobs creation error', () => {
-    expect(() => {
-      createPushNotificationsJobs('Not an array', queue)).to.throw('Jobs is not an array');
-    }});
+    expect(() => createPushNotificationsJobs('Not an array', queue)).to.throw('Jobs is not an array')
+    });
 
   it('testing the created jobs', () => {
     const jobs = [

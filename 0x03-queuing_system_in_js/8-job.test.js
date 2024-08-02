@@ -15,7 +15,7 @@ describe('Testing createPushNotificationJobs', () => {
   });
 
   it('testing jobs creation error', () => {
-    expect(() => createPushNotificationsJobs('Not an array', queue)).to.throw('Jobs is not an array')
+    expect(() => createPushNotificationsJobs('Not an array', queue)).to.throw('Jobs is not an array');
     });
 
   it('testing the created jobs', () => {
@@ -41,7 +41,9 @@ describe('Testing createPushNotificationJobs', () => {
     createPushNotificationsJobs(jobs, queue);
 
     expect(queue.testMode.jobs.length).to.equal(4);
-    expect(queue.testMode.jobs[0].data).to.deep.equal(jobs[0]);
-    expect(queue.testMode.jobs[0].type).to.equal('push_notification_code_3');
+    jobs.forEach((job, index) => {
+        expect(queue.testMode.jobs[index].data).to.deep.equal(job);
+        expect(queue.testMode.jobs[index].type).to.equal('push_notification_code_3');
+      });
   });
 });

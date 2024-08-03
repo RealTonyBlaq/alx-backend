@@ -3,7 +3,7 @@ import { createQueue } from "kue";
 const queue = createQueue();
 
 const createJob = (phoneNumber, message) => {
-  const job = queue.create('push_notification_code', { phoneNumber, message})
+  const job = queue.create('push_notification_code', { phoneNumber, message })
     .save((err) => {
       if (err) console.log('Error occured:', err);
       else console.log('Job created:', job.id);
